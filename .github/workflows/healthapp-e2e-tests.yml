@@ -30,7 +30,7 @@ jobs:
       run: |
         npm start &
         echo $! > server.pid
-        sleep 3
+        npx wait-on http://localhost:3000
     
     - name: Install test dependencies
       working-directory: ./healthapp-tests
