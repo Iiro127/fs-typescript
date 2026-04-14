@@ -28,9 +28,11 @@ jobs:
     - name: Start healthapp server
       working-directory: ./healthapp
       run: |
-        npm start &
+        npm start > server.log 2>&1 &
         echo $! > server.pid
-        npx wait-on http://localhost:3000
+        sleep 2
+        cat server.log
+        npx wait-on http://localhost:3000 --timeout 10000
     
     - name: Install test dependencies
       working-directory: ./healthapp-tests
