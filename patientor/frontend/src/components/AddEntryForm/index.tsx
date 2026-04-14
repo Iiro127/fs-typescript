@@ -306,7 +306,7 @@ const AddEntryForm = ({ open, onClose, onSubmit }: Props) => {
           color="primary"
           disabled={isSubmitting}
         >
-          {isSubmitting ? 'Submitting...' : 'Submit'}
+          {isSubmitting ? 'Submitting...' : 'Add'}
         </Button>
       </DialogActions>
     </Dialog>

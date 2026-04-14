@@ -60,14 +60,14 @@ router.post(
   newEntryParser,
   (
     req: Request<{ id: string }, unknown, EntryWithoutId>,
-    res: Response<Entry | string>,
+    res: Response<Patient | string>,
   ): void => {
     const patient = patientsService.getPatientById(req.params.id);
 
     if (patient) {
       const newEntry = patientsService.addEntry(patient, req.body);
 
-      res.status(201).json(newEntry);
+      res.status(201).json(patient);
     } else {
       res.sendStatus(404).send('No found patient');
     }
