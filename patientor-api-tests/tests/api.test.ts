@@ -9,7 +9,7 @@ test.describe('Patientor API', () => {
       expect(response.status()).toBe(200);
 
       const text = await response.text();
-      expect(text).toBe('pong');
+      expect(text).toBe('{\"message\":\"pong\"}"');
     });
   });
 

@@ -18,8 +18,8 @@ import {
 
 const router = express.Router();
 
-router.get('/', (_req: Request, res: Response<Patient[]>): void => {
-  res.json(patientsService.getAllPatient());
+router.get('/', (_req: Request, res: Response<NoSsnPatient[]>): void => {
+  res.json(patientsService.getNoSsnPatients());
 });
 
 router.get('/no-ssn', (_req: Request, res: Response<NoSsnPatient[]>): void => {
@@ -51,7 +51,7 @@ router.post(
   ): void => {
     const newPatient = patientsService.addPatient(req.body);
 
-    res.status(201).json(newPatient);
+    res.status(200).json(newPatient);
   },
 );
 
