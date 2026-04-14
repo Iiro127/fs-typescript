@@ -19,6 +19,8 @@
     "@types/express": "^5.0.6",
     "@types/node": "^25.6.0",
     "eslint": "^9.39.4",
+    "ts-node": "^11.30.0",
+    "typescript": "^5.5.0",
     "typescript-eslint": "^8.58.2"
   },
   "dependencies": {
